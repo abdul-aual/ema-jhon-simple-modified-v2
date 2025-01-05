@@ -87,7 +87,7 @@ const Cart = () => {
                             <div key={item.key} className="cart-item">
                                 <small>{item.name}</small>
                                 <p>Quantity: {item.quantity}</p>
-                                <p>Price: {item.MRP}</p>
+                                <p>Price: {item.price}</p>
                                 <button
                                     className="remove-btn"
                                     onClick={() => removeItemFromCart(item.key)}
