@@ -1,0 +1,113 @@
+#expandable-div{
+    position: fixed;
+    top:50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 130px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+#expandable-div.collapse{
+    height: 130px;
+    width: 80px;
+    margin-right: 0;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+#expandable-div.expanded{
+    height: 450px;
+    width: 350px;
+    border-radius: 10px;
+}
+.collapse-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    margin-right: 0;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+.expandable-content{
+    display: none;
+}
+#expandable-div.collapse .collapse-content{
+    display: flex;
+}
+#expandable-div.expanded .expandable-content{
+    display: flex;
+    height: 100%;
+    border-radius: 18px;
+}
+#expandable-div.expanded .collapse-content{
+    display:none;
+}
+.cross-btn{
+    cursor: pointer;
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    right: 10px;
+    border: none;
+}
+.scrollable-content {
+    margin-top: 40px;
+    padding: 20px; 
+    /* height: calc(100% - 40px);    /* Adjust height to account for close button */
+    overflow-y: auto;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+  
+  .scrollable-content p {
+    margin: 0 0 10px;
+  }
+  
+.item-div{
+    height: 25%;
+    background-color: #2bcb73;
+    color: white;
+}
+.logo-div{
+    height: 50%;
+    /* background-color: #0c8542; */
+    border-bottom: 1px solid lightgray;
+}
+.total-amount-div{
+    height: 25%;
+    background-color: #eaeaea;
+}
+.logo-div img{
+    height: 100%;
+    width: 100%;
+}
+.collapse-content > div {
+    width: 100%;
+}
+.item-div,.total-amount-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+}
+.remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.remove-btn:hover {
+    color: darkred;
+}

@@ -1,0 +1,68 @@
+.pd-main-div{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-bottom: 1px solid lightgray;
+
+}
+.pd-main-div h4{
+    color: #2bcb73;
+}
+.pd-details{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.add-to-bag-btn{
+    width: 130px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid #0c8542;
+    background-color: white;
+    color: #0c8542;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    margin-bottom: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-to-bag-btn:hover{
+    background-color: #0c8542;
+    color: white;
+    transition: background-color 0.3s;
+}
+.clicked{
+    background-color: white;
+    color:#0c8542;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    
+}
+.clicked:hover{
+background-color: white;
+color: #0c8542;
+transition: background-color 0.5s;
+}
+.inc-btn,.dec-btn{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantity-btn{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #0c8542;
+    border-radius: 5px;
+    margin: auto;
+    cursor:default;
+}
