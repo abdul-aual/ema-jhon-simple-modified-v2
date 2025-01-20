@@ -3,9 +3,7 @@ import fakeData from '../fakedata/fakeData.json';
 import Productt from './Productt';
 import {MyContext} from '../ContextProvider';
 
-const Products = () => {
-    // const [products, setProducts] = useContext(MyContext) 
-    // const [cart, setCart]=  useContext(MyContext) 
+const Products = () => { 
     const { products, setProducts, cart, setCart } = useContext(MyContext);
 
     // Load cart and sync with products when the component mounts
@@ -43,6 +41,10 @@ const Products = () => {
         );
         setProducts(updatedProducts);
 
+
+
+
+
         // Update the cart state
         setCart((prevCart) => {
             const existingItem = prevCart.Items.find((item) => item.key === key);
@@ -52,10 +54,11 @@ const Products = () => {
                 : [...prevCart.Items, { ...selectedProduct, quantity: 1 }];
 
             return {
-                TotalItems: updatedItems.length,
-                TotalAmount: prevCart.TotalAmount + selectedProduct.price,
-                Items: updatedItems,
-            };
+    TotalItems: updatedItems.length,
+    TotalAmount: parseFloat((prevCart.TotalAmount + selectedProduct.price).toFixed(2)),
+    Items: updatedItems,
+};
+
         });
     };
     
@@ -81,7 +84,7 @@ const Products = () => {
             );
             return {
                 TotalItems: prevCart.TotalItems,
-                TotalAmount: prevCart.TotalAmount + selectedProduct.price,
+                TotalAmount: parseFloat((prevCart.TotalAmount + selectedProduct.price).toFixed(2)),
                 Items: updatedItems,
             };
         });
